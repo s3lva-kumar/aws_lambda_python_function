@@ -6,7 +6,7 @@ from datetime import datetime
 import shutil
 
 
-db_name = []
+db_name = [] # give the database names here like [ "test" , "demo"]
 
 def handler(event, context):
     print("Function started")
