@@ -1,8 +1,11 @@
 #!/bin/bash python3
 import boto3
+from dotenv import load_dotenv
+import os
 
 def lambda_handler(event, context): 
-    client = boto3.client('lambda', region_name="us-east-2")
+    load_dotenv()
+    client = boto3.client('lambda', region_name=os.getenv("REGION"))
     response = client.list_functions(FunctionVersion='ALL')
     version_count=[]
     i=1
