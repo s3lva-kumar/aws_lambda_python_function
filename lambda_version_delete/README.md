@@ -15,7 +15,7 @@ This is a function for deleting the lambda version in AWS. Sometimes, we aren't 
   Configure the Lambda full access policy for this function.
 
 ## Note:
-  This function specially made for Lambda envrinment, if you need to configure this function on where else, you should remove the function params "(event, context)".
+  This function specially made for Lambda environment, if you need to configure this function on where else, you should remove the function params "(event, context)".
 
 
  
