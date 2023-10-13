@@ -3,14 +3,20 @@ import boto3
 import os
 import json
 from datetime import datetime
-dynamodb = boto3.resource('dynamodb', region_name="us-east-2")
-table = dynamodb.Table('application_http_status')
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+site_data=json.loads(os.environ["URL"])
+sns_arn = os.environ['snsARN']  # Getting the SNS Topic ARN passed in by the environment variables.
+DYNAMODB_TABLE = os.environ['DYNAMODB_TABLE_NAME']
+DYNAMODB_TABLE_REGION=os.environ['DYNAMODB_TABLE_REGION']
+dynamodb = boto3.resource('dynamodb', region_name=DYNAMODB_TABLE_REGION)
+table = dynamodb.Table(DYNAMODB_TABLE)
 snsclient = boto3.client('sns')
 def lambda_handler(event, context):
    
-   site_data = [] # give the value like ex: [{"name": "test", "url": "test.com"}]
-   
-   sns_arn = os.environ['snsARN']  # Getting the SNS Topic ARN passed in by the environment variables.
    for x in site_data: 
          appname = x["name"]
          url = x["url"]
