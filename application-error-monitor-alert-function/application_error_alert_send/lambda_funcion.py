@@ -1,5 +1,4 @@
 import base64
-import requests
 import boto3
 import gzip
 import json

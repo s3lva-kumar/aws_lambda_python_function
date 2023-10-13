@@ -11,6 +11,6 @@
        URI=             # URI of the mongodb 
        BUCKET_NAME=     # your backup storage S3 bucket name
        BUCKET_REGION=   # you backup bucket region
-       DB_NAME=         # list of collocation name for take backup ex: ["admin", "local"] (or) you can provide ["*"] to take the all the collocation to backup, if you empty list "[]" it will throw error.
+       DB_NAME=         # list of collocation name for take backup ex: ["admin", "local"] (or) you can provide ["*"] to take the all the collocation to backup, if it is empty list "[]" it will throw error.
        
        ```
