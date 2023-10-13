@@ -7,7 +7,7 @@ Additionally, this function will manage the state of the application endpoint in
 This function need this all the following ENNs:
    ```
    URL=[{"name": "", "url": ""}]  # give the list of objects ex: [{"name": "test", "url": "http(s)://test.com"}]
-   snsARN=                        # SNS Topic ARN name for end the email to the subscribers 
+   snsARN=                        # SNS Topic ARN name for send an email to the subscribers 
    DYNAMODB_TABLE_NAME=           # DynamoDB table name to log the endpoint with it status code
    DYNAMODB_TABLE_REGION=         # Region of the Dynamodb table placed.
    ```
