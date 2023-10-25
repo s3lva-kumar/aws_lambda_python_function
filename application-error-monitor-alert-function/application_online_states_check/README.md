@@ -4,7 +4,7 @@ This function is primarily utilized to monitor the status of HTTP(S) application
 Additionally, this function will manage the state of the application endpoint in AWS DynamoDB. It will also send an email notification when the application's status is not 200. Once the problematic application returns to an online state, it will send recovery emails as well.
 
 ### ENVs update:
-This function need this all the following ENNs:
+This function need this all the following ENVs:
    ```
    URL=[{"name": "", "url": ""}]  # give the list of objects ex: [{"name": "test", "url": "http(s)://test.com"}]
    snsARN=                        # SNS Topic ARN name for send an email to the subscribers 
